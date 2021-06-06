@@ -1,5 +1,11 @@
 
 def print_board(board):
+	'''
+		Prints the board
+		
+		Parameters:
+			board (list[str]): The board values of the game 
+	'''
 	print(
 		f'''
 			_{board[0]}_|_{board[1]}_|_{board[2]}_
@@ -11,8 +17,16 @@ def print_board(board):
 
 def is_move_valid(move, board):
 	'''
-		Receives the move and the board and returns
-		validity, valid move and the message
+		Checks the validity of the move
+
+		Parameters:
+			move (str): The user input for the move
+			board (list[str]): The board values of the game
+
+		Returns:
+			is_valid (bool): If the move is valid or not
+			valid_move (int): The valid move after typecasting move
+			msg (str): The message w.r.t the validation check  
 	'''
 
 	if not move.isnumeric():
@@ -29,6 +43,17 @@ def is_move_valid(move, board):
 	return True, move, "Boad is valid"
 
 def is_game_over(board):
+	'''
+		Checks if the game is over or not
+
+		Parameters:
+			board (list[str]): The board values for the game
+
+		Returns:
+			is_game_over (bool): If the game is over or not
+			winner (str): The winner of the game or none in case of tie
+	'''
+
 	WAYS_TO_WIN = (
 		(0, 1, 2),
 		(3, 4, 5),

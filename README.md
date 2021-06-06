@@ -16,5 +16,13 @@ Two reasons -
    - Loops
 
 
-## Divide this project into several steps - 
+## Divide this project into these steps - 
+
+1. Print the board
+2. Store the moves
+3. Take user input
+4. Check if game is over
+5. Print the winner if there's one
+
+
 
